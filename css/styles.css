@@ -49,6 +49,14 @@ img {
   overflow: hidden;
 }
 
+.divider {
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #ccc;
+}
+
 .wallet-container {
   display: flex;
   max-width: 900px;
@@ -135,4 +143,86 @@ img {
 
 .card-maestro .card-link::before {
   background-image: url("../img/maestro.svg");
+}
+
+.wallet-details {
+  width: 600px;
+  height: 450px;
+  overflow: auto;
+  padding: 40px;
+}
+
+.wallet-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wallet-details-heading,
+.wallet-details-balance {
+  margin: 0;
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.transactions-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+}
+
+.transaction:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.indicator {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-size: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.indicator-expense {
+  background-image: url("../img/minus.svg");
+}
+
+.indicator-income {
+  background-image: url("../img/plus.svg");
+}
+
+.transaction-details {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.transaction-title {
+  margin: 0;
+}
+
+.transaction-info {
+  font-size: 15px;
+  color: #aaa;
+}
+
+.transaction-amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.transaction-expense .transaction-amount {
+  color: tomato;
+}
+
+.transaction-income .transaction-amount {
+  color: green;
 }
